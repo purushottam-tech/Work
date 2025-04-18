@@ -1,351 +1,5 @@
-
-
-DEVOPS: TO DELIVER THE APP/PsRODUCT/SOFTWARE SPEEDILY
-
-SDLC: SOFTWARE DEVELOPMENT LIFECYCLE
-DEPLOYMENT: process of installing the 6application to the server.
-
-HUMANS: Infant -- > Toddler -- > Child -- > Teen -- > Adult -- > Old
-BABY: MEN & WOMENT
-
-APPLICATION:
-DEV & OPS  
-
-PLAN
-CODE 
-BUILD
-TEST
-DEPLOY
-OPERATE
-MONITOR
-
-
-
-COURSE: DEVOPS WITH AWS
-FREE: LINUX
-DURATION: 2.5 MONTHS 
-FEE: 10K (16K FOR REC +)
-TIMINGS: 6:00 TO 7:30 PM
-CLASS: 70 MINUTES (2O MINS INTERACTIVE)
-EXP: 3+ 
-LABS: 9 AM - 7 PM
-PROJECTS: 5 PROJECTS
-TOOLS: 18 TOOLS
-
-=============================================================================
-
-SOFTWARE ARCHITECTURE:
-Blueprint of the application workflow.
-
-TYPES:
-1. ONE-TIER ARCHITECTURE
-2. TWO-TIER ARCHITECTURE
-3. THREE-TIER ARCHITECTURE
-4. N-TIER ARCHITECTURE
-
-TIER = LAYER = SERVER
-
-SERVER: to serve the services to end user.
-
-1. web server  : presentation layer
-2. app server  : business/logic layer
-3. db server   : data server
-
-
-WEB SERVER: httpd
-AKA	  : the presentation layer
-Purpose   : to show the app
-Who	  : UI/UX (front-end dev)
-What	  : Web Technologies
-EX	  : html, css, js
-
-
-APP SERVER: tomcat
-AKA	  : Business/Logic layer
-Purpose	  : to use the app
-Who       : Backend Dev
-What	  : Programming languages
-Ex        : java, python, c, c++, .net
-
-
-DB SERVER: mysql
-AKA       : data server
-Purpose   : to store & retrieve data
-Who	  : DBA/DBD
-What      : DB languages
-Ex	  : mysql, mssql, postgres, arango, oracle ---
-
-
-
-1. ONE-TIER ARCHITECTURE : (STANDALONE APP)
-ALL 3 LAYERS WILL BE ON LOCAL.
-HERE THE APP WILL WORK ON OUR LAPTOP.
-IT DOESN'T REQ INTERNET CONNECTION.
-
-EX: VLC 
-
-2. TWO-TIER ARCHITECTURE : (CLIENT-SERVER APP)
-WEB & APP = LOCAL 
-DB = INTERNET
-IT REQ INTERNET CONNECTION.
-
-EX: BANKING APPS
-
-3. THREE-TIER ARCHITECTURE : (WEB APP)
-APP NEED NOT TO INSTALL
-WE CAN USE ANY APP FROM THE INTERNET
-
-EX: ALL THE APP
-=====================================================================================
-SERVER: Serves the services to end user.
-it will take request from user and send response.
-
-
-PHYSICAL SERVERS:
- 
-1. It will consume space
-2. 24/7 electricity
-3. maintenance
-
-CLOUD SERVERS:
-AWS
-AZURE
-GCP
-
-AWS : AMAZON WEB SERVICES
-SERVER: EC2 -- > ELASTIC COMPUTE CLOUD
-
-
-TO CREATE SERVER ON AWS, IT WILL TAKE 7 STEPS
-
-1. NAME & TAGS : 
-
-2. AMI : AMAZON MACHINE IMAGE
-   WE HAVE OS, SOFTWARE PKGS
-
-3. INSTANCE TYPE: CPU & MEMORY
-   T2.MICRO : 1 CPU & 1 RAM 
-
-4. KEYPAIR: USED TO LOGIN 
-   HERE WE HAVE 2 KEYS 
-   1. PUBLIC KEY   : AWS
-   2. PRIVATE KEY  : USER   (PEM, PPK)
-
-5. NETWORK: 
-   VPC : PRIVACY & SECURITY FOR SERVER
-   SG  : TO ACCESS THE APPLICATIONS (PORTS : 0 - 65535)
-
-6. STORAGE: EBS VOLUME
-   TO PROVIDE STORAGE FOR THE SERVER 
-   DEFAULT: 8GB   MAX: 16 TB
-
-7. summary
-
-
-
-LINUX:
-It is an os -- > Blender
-
-os: Operating system: 
-its a software used to communicate with systems.
-
-Linux is a Kernel.
-Kernel: it is lowest level of operating system.
-
-
-WHY WE NEED TO LEARN LINUX:
-1. TOP 500 SUPER COMPUTERS
-2. 96% SERVERS
-3. 86% mobiles
-4. Electronic Gadgets
-
-ADVANTAGES:
-1. FREE AND OPEN-SOURCE
-2. SECURITY WILL BE HIGH
-3. HIGH PERFORMANCE
-4. MULTI USER BASED
-5. IT SUPPORTS ALL PROGRAMMING LANGUAGES
-6. HIGH SPEED
-
-COMPONENTS:
-1. SHELL: deal with input & outputs.
-2. DAEMON: deal with background processs.
-3. Kernel: deals with hardware. (cpu, ram, rom)
-
-FLAVOURS/DISTRIBUTION:
-IPHONE15 -- > 15 + -- > 15 PRO -- > PRO MAX
-
-UBUNTU   : 70%
-REDHAT
-CENTOS
-FEDORA
-DEBIAN
-ROCKY LINUX
-KALI LINUX
-ALMA LINUX
-
-
-TYPES:
-1. GUI : GRAPHICAL USER INTERFACE
-2. CLI : COMMAND LINE INTERFACE
-
-COMMANDS:
-
-sudo -i		: to login as root user
-uname 		: to show the os name
-uname -r	: to show the os kernel info
-uname -a	: to show complete info of os
-who/w		: to show the logged user info
-whoami		: to show current user info
-clear/ ctrl l	: to clear the screen
-logout /ctrl d	: to logout from the current user
-date		: time and date
-hostname 	: to print the hostname
-hostnamectl set-hostname raham : it will set the hostname
-
-FILE COMMANDS:
-
-touch filename: to create a file
-ls/ll			: to list the file
-cat file1		: to show content in file1
-more file1		: to show content in file1
-cat>>file1		: to insert the content in a file
-enter + ctrl d 		: to save the content
-cp file1 file2		: to copy content from file1 to file2
-mv file1 raham		: to rename file1 as raham
-rm file1		: to remove a file
-rm file3 -f		: to remove a file forcefully
-rm * -f			: to remove all files forcefully
-touch file{1..100}	: to create file1 to file100
-wc file1		: to print lines, words and characters of a file
-
-
-head file1		: to print top 10 lines
-head -5 file1		: to print top 5 lines
-head -12 file1		: to print top 12 lines
-tail file1		: to print bottom 10 lines
-tail -5 file1		: to print bottom 5 lines
-tail -12 file1		: to print bottom 12 lines
-sed -n '7,14p' file1	: to print from line 7 to 14
-
-mkdir dir1		: to create a directory
-cd dir1			: to change to dir1
-cd ..			: to come a dir back 
-
-HARDWARE COMMANDS:
-cat /proc/cpuinfo	: to show cpu information
-lscpu			: to show cpu information
-cat /proc/meminfo	: to show memory information
-lsmem			: to show memory information
-fdisk -l		: to show ebs volume
-lsblk			: to show ebs volume
-yum install lshw	: to install lshw package
-lshw			: to show complete hardware information
-cat /etc/os-release	: to show flavour of os
-
-
-==========================================================================================
-
-EDITORS:
-is to edit/modify the content in a file.
-types:
-1. vi/vim
-2. nano
-
-i	: to insert the conetnt
-esc	: to exit from insert mode
-
-1. command mode
-2. insert mode
-3. save mode
-
-
-SAVE MODE:
-:w	: to save the content
-:q	: to quit from file
-:wq	: to save & quit 
-:wq!	: to save & quit forcefully
-
-INSERT MODE:
-i	: to insert the content
-I	: starting of the line
-A	: to end of the line
-O	: creats new line above existing line
-o	: crerate new line below existing line
-
-COMMAND MODE:
-
-gg	: top of file
-shift g	: bottom of file
-:set nu : print number of lines inside the file
-:10	: to go to 10th line (10gg)
-yy	: to copy single line
-3yy	: to copy three lines
-p	: to past for single time
-3p	: to past for 3 times
-dd	: to delete single line
-3dd	: to delete three lines
-u	: undo
-ctrl r	: to redo
-
-==================================================================
-
-GREP: Global Regular Expression Print
-Purpose: to find the words in a file
-
-
-grep word file1		: to search for a word in file1
-grep word file1 -c	: to print the count of word
-grep word file1 -i	: ignores case sensitive
-grep word file1	-v	: to avoid the lines which have the word
-grep 'word1\|word2' file1: to search for multiple words
-
-
-
 ==============================================================
-
 GIT : Global Information Tracker
-
-SCM : Source Code Management 
-VCS : Version Control System
-
-WHY GIT: to store each version of code seperately.
-Purpose: To RollBack
-
-Rollback means Going back to previous version of the application.
-V2 < -- v3
-
-GIT:
-
-Git is used to track the files.
-It will maintain multiple versions of the same file.
-It is platform-independent.
-It is free and open-source.
-They can handle larger projects efficiently.
-It is 3rd generation of vcs.
-it is written on c programming
-it came on the year 2005
-
-
-V1 : INDEX.HTML = 10 lines
-V2 : INDEX.HTML = 20 lines
-V3 : INDEX.HTML = 30 lines
-
-
-CVCS : Centralized Version Control System
-stores code on single repo.
-ex: svn
-
-DVCS : Distributed Version Control System
-stores code on multiple repos.
-ex: git
-
-STAGES OF GIT:
-
-1. Working Directory   : where we write the code
-2. Staging Area        : where we track the code
-3. Repository          : where we store the tracked code.
-
 
 PRACTICAL PART:
 1. CREATE A SERVER AND LOGIN TO IT
@@ -395,16 +49,7 @@ git stash apply	: to unstash the file
 git stash list	: to list the stashes
 git stash clear	: to delete the stashes
 
-
-DAY: 29-04-2024 :
-
-
 BRANCHES:
-It's an individual line of development for code.
-we create different branches in real-time.
-each developer will work on their own branch.
-At the end we will combine all branches together.
-Default branch is Master.
 
 git branch		: to list the branches
 git branch movies	: to create a new branch
@@ -597,10 +242,8 @@ SHORT LIVING BRANCHES: these branches we will delete and we dont use them freque
 EX: release, bugfix, --------
 
 ========================================================
-02-05-2024
-
-
 MAVEN:
+=========================================================
 
 raw chicken -- >  clean  --> marnet -- > ingredients -- > Chicken Biryani
 raw code    -- > build   -- > test  -- > artifact -- > Deployment
@@ -697,62 +340,7 @@ node.js	: npm
 
 ALTERNETIAVES: 
 ANT, GRADLE for java projects.
-
-HISTORY:
-    1  yum install git java-1.8.0-openjdk maven tree -y
-    2  mvn -v
-    3  git clone https://github.com/devopsbyraham/jenkins-java-project.git
-    4  ll
-    5  cd jenkins-java-project/
-    6  ll
-    7  tree
-    8  cat pom.xml
-    9  tree
-   10  ll
-   11  mvn compile
-   12  ll
-   13  tree
-   14  mvn test
-   15  tree
-   16  mvn package
-   17  tree
-   18  mvn install
-   19  ll /root/.m2/repository/in/RAHAM/NETFLIX/1.2.2/
-   20  ll
-   21  mvn clean
-   22  ll
-   23  mvn install
-   24  ll
-   25  mvn clean
-   26  mvn clean packge
-   27  mvn clean package
-   28  ll
-   29  mvn clean
-   30  ll
-   31  mvn compile
-   32  mvn test
-   33  mvn package
-   34  tree
-   35  mvn install
-   36  mvn clean
-   37  mvn clean package
-   38  ll target/
-   39  tree
-   40  ll
-   41  cd
-   42  mvn clean
-   43  'll
-   44  ll
-   45  cd jenkins-java-project/
-   46  ll
-   47  mvn clean
-   48  cd
-   49  ls -al
-   50  history
-
 ===============================================================================
-
-
 JENINS IS A CI/CD TOOL.
 REALITY: JENKINS IS ONLY FOR CI.
 
@@ -1494,11 +1082,6 @@ ONE JOB IS INKED WITH ANOTHER JOB
 IF WE BUILD JOB-1 AUTOMATICALLY JOB-2 IS GOING TO BUILD.
 
 =========================================================
-
-
-
-
-
 Automated: Deployment, Installation
 Non-Automated: Server
 To perform end-to-end automation we can use Ansible.
@@ -1595,43 +1178,6 @@ ansible all -a "user add raham"
 ansible all -a "cat /etc/passwd"
 ansible all -a "yum remove git* maven* httpd* -y"
 
-
-HISTORY:
-
-    1  amazon-linux-extras install ansible2 -y
-    2  yum install python3 python-pip python-dlevel -y
-    3  vim /etc/ansible/hosts
-    4  vim /etc/ansible/hosts o
-    5  vim /etc/ansible/hosts
-    6  ssh-keygen
-    7  ll .ssh/
-    8  ssh-copy-id root@172.31.23.99
-    9  ssh 172.31.23.99
-   10  ssh-copy-id root@172.31.29.194
-   11  ssh 172.31.29.194
-   12  ssh-copy-id root@172.31.18.78
-   13  ssh 172.31.18.78
-   14  ssh-copy-id root@172.31.21.219
-   15  ssh 172.31.21.219
-   16  ansible all -m ping
-   17  ansible -m ping all
-   18  ansible all -a "touch file1"
-   19  ansible all -a "ls"
-   20  ansible all -a "yum install git -y"
-   21  ansible all -a "git -v"
-   22* ansible dev -a "yum install maven -y"
-   23  ansible all -a "mvn -v"
-   24  ansible dev -a "yum install tree -y"
-   25  ansible all -a "tree -v"
-   26  ansible all -a "useradd raham"
-   27  ansible all -a "cat /etc/passwd"
-   28  ansible all -a "yum install httpd -y"
-   29  ansible all -a "systemctl status httpd"
-   30  ansible all -a "systemctl start httpd"
-   31  ansible all -a "systemctl status httpd"
-   32  cat /etc/ansible/ansible.cfg
-   33  vim /etc/ssh/sshd_config
-   34  history
 ============================================================================
 
 2. MODULES:
@@ -1720,56 +1266,8 @@ ansible all -m setup  | grep -i family
 ansible all -m setup  | grep -i pkg
 ansible all -m setup  | grep -i cores
 
-HISTORY:
-   42  ansible all -m ping
-   43  ansible all -a "yum remove git* maven* httpd* tree* -y"
-   44  ansible all -m ping
-   45  sudo -i
-   46  ansible all -a "git -v"
-   47  ansible all -m yum -a "name=git state=present"
-   48  ansible all -a "git -v"
-   49  ansible all -m yum -a "name=maven state=present"
-   50  ansible all -m yum -a "name=httpd state=present"
-   51  ansible all -a "httpd -v"
-   52  ansible all -m yum -a "name=httpd state=started"
-   53  ansible all -m service -a "name=httpd state=started"
-   54  ansible all -a "systemctl status httpd"
-   55  ansible all -m service -a "name=httpd state=stopped"
-   56  ansible all -a "systemctl status httpd"
-   57  ansible all -m yum -a "name=httpd state=latest"
-   58  ansible all -m yum -a "name=httpd state=absent"
-   59  ansible all -m user -a "name=vijay state=present"
-   60  ansible all -a "cat /etc/passwd"
-   61  ansible all -m user -a "name=revii state=present"
-   62  ansible all -a "cat /etc/passwd"
-   63  ll
-   64  vim raham.txt
-   65  ll
-   66  ansible all -m copy -a "src=raham.txt dest=/tmp"
-   67  ansible all -a "ls"
-   68  ansible all -a "ls /ymp"
-   69  ansible all -a "ls /tmp"
-   70  ansible all -a "yum remove maven* git* httpd* -y"
-   71  vim raham.yml
-   72  ansible-playbook raham.yml
-   73  vim p
-   74  vim raham.yml
-   75  cat raham.yml
-   76  sed -i 's/present/absent/' raham.yml
-   77  cat raham.yml
-   78  ansible-playbook raham.yml
-   79  vim raham.yml
-   80  ansible-playbook raham.yml
-   81  cat raham.
-   82  cat raham.yml
-   83  ansible all -m setup
-   84  ansible all -m setup | grep -i cpu
-   85  ansible all -m setup | grep -i mem
-   86  ansible all -m setup | grep -i node
-   87  cat raham.yml
-   88  history
 
-
+   
 =========================================================
 
 
@@ -1971,70 +1469,7 @@ SHELL VS COMMAND VS RAW:
 raw >> command >> shell.
 
 
-HISTORY:  89  ll
-   90  rm -rf raham.txt
-   91  cat raham.yml
-   92  rm -rf raham.yml
-   93  vim raham.yml
-   94  touch index.html
-   95  cat raham.yml
-   96  ansible-playbook raham.yml --tags e
-   97  ansible-playbook raham.yml --tags b,c
-   98  ansible all -a "yum remove httpd* -y"
-   99  cat raham.yml
-  100  ansible-playbook raham.yml --skip-tags "e"
-  101  ansible-playbook raham.yml --skip-tags "e,a"
-  102  cat raham.yml
-  103  sed -i 's/present/absent/; s/installing/uninstalling/' raham.yml
-  104  cat raham.yml
-  105  ansible-playbook raham.yml
-  106  vim raham.yml
-  107  ansible-playbook raham.yml
-  108  vim raham.yml
-  109  cat raham.yml
-  110  sed -i 's/present/absent/' raham.yml
-  111  cat raham.yml
-  112  ansible-playbook raham.yml --extra-vars "a=maven b=httpd"
-  113  vim raham.yml
-  114  ansible-playbook raham.yml
-  115  vim raham.yml
-  116  ansible-playbook raham.yml
-  117  ansible all -a "mvn -v"
-  118  ansible all -a "httpd -v"
-  119  ansible all -a "git -v"
-  120  ansible all -a "docker -v"
-  121  ansible all -a "tree -v"
-  122  vim raham.yml
-  123  ansible-playbook raham.yml
-  124  ansible all -a "mvn -v"
-  125  ansible all -a "httpd -v"
-  126  ansible all -a "git -v"
-  127  ansible all -a "docker -v"
-  128  ansible all -a "tree -v"
-  129  vim raham.yml
-  130  ansible-playbook raham.yml
-  131  ansible all -a "cat /etc/passwd"
-  132  vim raham.yml
-  133  ansible-playbook raham.yml
-  134  vim raham.yml
-  135  ansible-playbook raham.yml
-  136  vim raham.yml
-  137  sed -i 's/present/absent/' raham.yml
-  138  ansible-playbook raham.yml
-  139  vim raham.yml
-  140  ansible-playbook raham.yml
-  141  cat raham.yml
-  142  sed -i 's/install/remove/' raham.yml
-  143  ansible-playbook raham.yml
-  144  vim raham.yml
-  145  touch index.html
-  146  ansible-playbook raham.yml
-  147  vim raham.yml
-  148  ansible-playbook raham.yml
-  149  sed -i 's/absent/present/' raham.yml
-  150  ansible-playbook raham.yml
-  151  cat raham.yml
-  152  history
+
 =============================================================================
 
 CONDITIONS:
@@ -3086,40 +2521,6 @@ kubectl delete -f raham.yml
 
 DRAWBACK: once pod is deleted we can't retrive the pod.
 
-HISTORY:
-    1  vim minikube.sh
-    2  sh minikube.sh
-    3  kubectl get pod
-    4  kubectl run pod1 --image nginx
-    5  kubectl get pod
-    6  kubectl get pods
-    7  kubectl get po
-    8  kubectl get po -o wide
-    9  kubectl describe po pod1
-   10  kubectl delete po pod1
-   11  kubectl run pod1 --image rahamshaik/paytmmovies:latest
-   12  kubectl get po
-   13  kubectl delete pod pod1
-   14  kubectl run pod1 --image nginx
-   15  kubectl get po
-   16  kubectl get po -o wide
-   17  kubectl describe pod pod1
-   18  kubectl delete pod pod1
-   19  vim abc.yml
-   20  kubectl create -f abc.yml
-   21  kubectl get po
-   22  kubectl get po -o wide
-   23  kubectl describe po pod1
-   24  kubectl delete pod pod1
-   25  ll
-   26  kubectl create -f abc.yml
-   27  kubectl delete pod pod1
-   28  kubectl get po
-   29  kubectl get po -A
-   30  kubectl get events
-   31  kubectl get events | grep -i warnings
-   32  kubectl get events | grep -i warning
-   33  history
 
 ===============================================================
 
