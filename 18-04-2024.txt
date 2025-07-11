@@ -1044,6 +1044,57 @@ sh /root/apache-tomcat-9.0.80/bin/startup.sh
 checking logs:
 tail -100f apache-tomcat-9.0.83/logs/catalina.out
 
+==========================================================================
+PROJECT
+==========================================================================
+pipeline {
+    agent any
+    
+    stages {
+        stage ('checkout') {
+            steps {
+                git 'https://github.com/purushottam-tech/jenkins-java-project.git'
+            }
+        }
+        stage ('build') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+        stage ('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage ('artifact') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage ('nexus') {
+            steps {
+              nexusArtifactUploader artifacts: [[artifactId: 'NETFLIX', classifier: '', file: 'target/NETFLIX-1.2.2.war', type: '.war']], credentialsId: 'eb8aa3e3-a27e-40b7-94c7-f0f7114d730c', groupId: 'in.RAHAM', nexusUrl: '13.201.89.55:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'netflix', version: '1.2.2'  
+            }
+        }
+        stage('deploy') {
+    steps {
+        deploy adapters: [
+            tomcat9(
+                credentialsId: 'f5e42285-9072-40ee-a5e4-fdfcd291f691',
+                path: '',
+                url: 'http://13.232.21.202:8080/'
+            )
+        ],
+        contextPath: 'netflix',
+        war: 'target/NETFLIX-1.2.2.war'
+    }
+}
+
+    }
+}
+
+}
+===============================================================================================
 
 RBAC:
 
