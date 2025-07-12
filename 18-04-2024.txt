@@ -1261,6 +1261,16 @@ playbook start with --- and end with ... (opt)
 
 
 EX-1:
+=====================================
+-hosts: all
+task:
+  - name: task-1
+    yum: name=maven state=present
+    when: ansible_os_family == "RedHat"
+  - name: task-2
+    apt: name=maven state=present
+    when: ansible_os_family == "ubuntu"
+===================================
 
 - hosts: all
   tasks:
